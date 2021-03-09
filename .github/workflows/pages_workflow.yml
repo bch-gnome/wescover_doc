@@ -1,0 +1,25 @@
+name: pages_workflow
+
+on:
+        push:
+
+jobs:
+        build_docs_job:
+                runs-on: ubuntu-latest
+                container: debian:buster-slim
+
+                steps:
+                        - name: Init
+                                env:
+                                        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                                run:
+                                        apt-get update
+                                        apt-get install -y git
+                                        git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
+                                shell: bash
+
+                        - name: Build doc script
+                                env:
+                                        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                                run: "docs/buildDoc.sh"
+                                shell: bash
