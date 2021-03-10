@@ -1,8 +1,5 @@
 name: pages_workflow
 
-on:
-        push:
-
 jobs:
         build_docs_job:
                 runs-on: ubuntu-latest
@@ -12,7 +9,7 @@ jobs:
                         - name: Init
                           env:
                                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                          run:
+                          run: |
                                 apt-get update
                                 apt-get install -y git
                                 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
@@ -23,3 +20,4 @@ jobs:
                                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                           run: "docs/buildDoc.sh"
                           shell: bash
+
