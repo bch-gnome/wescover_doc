@@ -17,5 +17,5 @@ jobs:
       - name: Build doc script
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-        run: docs/buildDoc.sh
+        run: doc/buildDoc.sh
         shell: bash
