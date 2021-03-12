@@ -61,13 +61,13 @@ The new pop-up window consists of multiple tabs with different information for t
 **Per-population summary** reports the mean breadth of coverage for each CCDS ID by each of the five population groups in 1KGP: African (AFR), American (AMR), East Asian (EAS), European (EUR), and South Asian (SAS). This information may be used to highlight differences in coverage between different populations. For example, exons that are comprehensively covered by WES in Europeans may have a lower mean breadth of coverage in another ancestry, suggesting the use of gene panels instead (especially for non-European).
 
 .. image:: /_static/detail_1.png
-   :scale: 50%
+   :scale: 30%
    :align: center
 
 **Coverage plots** displays two plots: the breadth of coverage distribution by each population groups in 1KGP (left) and per-locus coverage metric across genomic loci for the gene (right).
 
 .. image:: /_static/detail_2.png
-   :scale: 50%
+   :scale: 30%
    :align: center
 
 The violin plot on the left shows the breadth of coverage distribution by each population groups in 1KGP. The black horizontal line marks the average per-locus coverage metric based on exomes in the `Genome Aggregation Database <https://gnomad.broadinstitute.org/>`_ (gnomAD), as an independant estimate from large-scale data (125,748 exomes in the release 2.1).
@@ -81,19 +81,19 @@ The genes' exon-intron structures are shown below the coverage metric plot, as a
 **Comparison of distribution** allows users to visualize and to compare cumulative distribution (with Kolmogorov–Smirnov test) for breadth of coverage between pair of populations. Once the pair of population is specified on the left panel, the right part will be updated with the corresponding cummulative distributions. Two black dots connected with dashed line shows the point where the gap between two distribution is the largest. The D-statistics and p-value from Kolmogorov-Smirnov test are shown above the plot.
 
 .. image:: /_static/detail_3.png
-   :scale: 50%
+   :scale: 30%
    :align: center
 
 **Comparison of means** shows the pairwise differences between means of breadth of coverage using the Tukey's Honest Significant Difference test. The left triangular plot shows the estimated pairwise differences of means. The right plot shows the p-values from the significant difference test.
 
 .. images:: /_static/detail_4.png
-   :scale: 50%
+   :scale: 30%
    :align: center
 
 **Tests in GTR for the gene** provides a list of all gene panel tests registered in GTR that involves the selected gene. Each panel is listed by its unique accession version and provides a hyperlink to its entry in GTR when clicked. Given all genes reported by WEScover to be poorly covered by WES, users may browse these panels and read their entries in GTR to learn how to gain access to these tests.
 
 .. images:: /_static/detail_5.png
-   :scale: 50%
+   :scale: 30%
    :align: center
 
 
