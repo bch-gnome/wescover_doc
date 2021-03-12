@@ -1,4 +1,4 @@
-project = 'WEScover documentation'
+project = 'WEScover'
 author = 'In-Hee Lee'
 
 version = ''
