@@ -14,7 +14,7 @@ export REPO_NAME="${GITHUB_REPOSITORY##*/}"
 ## build docs
 
 ### clean up old builds
-make -C doc clean
+make -C docs clean
 
 ### get a list of branches, excluding 'HEAD' and 'gh-pages'
 versions="`git for-each-ref '--format=%(refname:lstrip=-1)' refs/remotes/origin/ | grep -viE '^(HEAD|gh-pages)$'`"
@@ -25,27 +25,27 @@ for current_version in ${versions}; do
 	echo "INFO: building sites for ${current_version}"
 
 	#skip branch without doc/ sphinx config
-	if [ ! -e 'doc/conf.py' ];then
-		echo -e "\tINFO: Couldn't find 'doc/conf.py' (skipped)"
+	if [ ! -e 'docs/conf.py' ];then
+		echo -e "\tINFO: Couldn't find 'docs/conf.py' (skipped)"
 		continue
 	fi
 
-	languages="en `find doc/locales/ -mindepth 1 -maxdepth 1 -type d -exec basename '{}' \;`"
+	languages="en `find docs/locales/ -mindepth 1 -maxdepth 1 -type d -exec basename '{}' \;`"
 	for current_language in ${languages}; do
 		export current_language
 
 		echo "INFO: building for ${current_language}"
 	
 		# HTML
-		sphinx-build -b html doc/ doc/_build/html/${current_language}/${current_version} -D language="${current_language}"
+		sphinx-build -b html docs/ docs/_build/html/${current_language}/${current_version} -D language="${current_language}"
 
 		# PDF 
-		sphinx-build -b rinoh doc/ doc/_build/rinoh -D language="${current_language}"
+		sphinx-build -b rinoh docs/ docs/_build/rinoh -D language="${current_language}"
 		mkdir -p "${docroot}/${current_language}/${current_version}"
-		cp "doc/_build/rinoh/target.pdf" "${docroot}/${current_language}/${current_version}/helloWorld-docs_${current_language}_${current_version}.pdf"
+		cp "docs/_build/rinoh/target.pdf" "${docroot}/${current_language}/${current_version}/helloWorld-docs_${current_language}_${current_version}.pdf"
 
 		# copy static assets into docroot
-		rsync -av "doc/_build/html/" "${docroot}/"
+		rsync -av "docs/_build/html/" "${docroot}/"
 	done
 done
 
