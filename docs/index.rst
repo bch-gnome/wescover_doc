@@ -10,5 +10,6 @@ Welcome to WEScover documentation
    introduction
    gtr
    usage
+   install
    references
    contact
