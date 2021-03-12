@@ -4,5 +4,11 @@ Welcome to WEScover documentation
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :numbered:
+   :glob:
 
-   autodoc
+   introduction
+   gtr
+   usage
+   references
+   contact
