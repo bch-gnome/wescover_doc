@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Using WEScover to check coverage of genes by WES &mdash; WEScover 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Local installation" href="install.html" />
+    <link rel="prev" title="2. Using the Genetic Testing Registry to find genes" href="gtr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> WEScover
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gtr.html">2. Using the Genetic Testing Registry to find genes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Using WEScover to check coverage of genes by WES</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#user-input">3.1. User input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table">3.2. Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#details-window">3.3. Details window</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">4. Local installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">5. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">6. Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WEScover</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>Using WEScover to check coverage of genes by WES</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-wescover-to-check-coverage-of-genes-by-wes">
+<h1><span class="section-number">3. </span>Using WEScover to check coverage of genes by WES<a class="headerlink" href="#using-wescover-to-check-coverage-of-genes-by-wes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-input">
+<h2><span class="section-number">3.1. </span>User input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/input_1.png"><img alt="_images/input_1.png" class="align-center" src="_images/input_1.png" style="width: 623.0px; height: 767.0px;" /></a>
+<p>From the <em>User input</em> panel, queries can be made either by the phenotypes (additionally combined with the names of gene panel tests (GPT) for the phenotype), or by gene symbols.</p>
+<p>Users will be prompted with an autocompleted list of valid values upon clicking any text area, so that users can quickly navigate and find their search terms. In the interest of speed, however, only a limited number of items are available in the autocomplete list. Even if the intended term does not appear in the beginning, continued typing will make the matching term appear eventually. Queries for phenotypes (or disease conditions) can be made either using the phenotypes in GTR (select <strong>Genetic Testing Registry (GTR)</strong>), or using the standardized terms in <a class="reference external" href="https://hpo.jax.org/app/">Human Phenotype Ontology</a> (HPO) (select <strong>Human Phenotype Ontology (HPO)</strong>).</p>
+<a class="reference internal image-reference" href="_images/input_2.png"><img alt="_images/input_2.png" class="align-center" src="_images/input_2.png" style="width: 623.0px; height: 296.0px;" /></a>
+<p>Choosing the phenotype of interest and pressing the filter button next to phenotypes will search the database for all GPTs related to the given phenotype, which will be seen in the autocomplete list for <strong>GPT name</strong>. Clicking the <em>Filter</em> button next to <strong>GPT name</strong> will update the autocomplete list for <strong>Gene symbol</strong> with all genes that are targeted by the selected GPTs. If GTP is not selected, the value list for <strong>Gene symbol</strong> will be populated by any genes related to the selected phenotype.</p>
+<p>Next, the minimum per-locus read depth for breadth of coverage (<strong>Depth of coverage</strong>) needs to be choosen: <em>5x</em>, <em>10x</em>, <em>15x</em>, <em>20x</em>, <em>25x</em> (default), <em>30x</em>, <em>50x</em>, or <em>100x</em>.</p>
+<p>Finally, users need to select the <strong>Human reference genome aseembly version</strong> by which exomes were processed: <em>GRCh37 (b37/hg19)</em> (default) or <em>GRCh38 (hg38)</em>.</p>
+<a class="reference internal image-reference" href="_images/input_3.png"><img alt="_images/input_3.png" class="align-center" src="_images/input_3.png" style="width: 623.0px; height: 765.0px;" /></a>
+<p>Alternatively, users can start querying arbitrary gene(s) of interest without specifying specific phenotypes.</p>
+<p>Following the example described previously, users may type <code class="docutils literal notranslate"><span class="pre">Fatty</span> <span class="pre">liver</span> <span class="pre">disease,</span> <span class="pre">nonalcoholic</span> <span class="pre">1</span></code>, as seen in GTR, under <strong>GTR Phenotype</strong> then click the <em>Filter</em> button to return all genes associated with this phenotype. In this example, only <em>PNPLA3</em> will be listed for <strong>Gene symbol</strong>. After setting other inputs, click <em>Submit query</em> button to proceed.</p>
+<p>To reset all inputs and start over, click <em>Clear inputs</em>.</p>
+</div>
+<div class="section" id="table">
+<h2><span class="section-number">3.2. </span>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
+<p>clicking <em>Submit query</em> button generates a table summarizing the breadth of coverage for each transcript (identified by their <a class="reference external" href="https://www.ncbi.nlm.nih.gov/CCDS/">Consensus Coding Sequence</a> identifier, <strong>CCDS ID</strong>) as shown below:</p>
+<a class="reference internal image-reference" href="_images/result.png"><img alt="_images/result.png" class="align-center" src="_images/result.png" style="width: 1266.0px; height: 206.0px;" /></a>
+<ul class="simple">
+<li><p><strong>Gene Symbol</strong>: the official symbol for the gene by <cite>HUGO Gene Nomenclature Committee &lt;https://www.genenames.org&gt;</cite> (HGNC).</p></li>
+<li><p><strong>CCDS ID</strong>: the unique accession identifier in the CCDS project for the transcripts of genes.</p></li>
+<li><p><strong>Global coverage</strong>: reports the mean, minimum, and maximum breadth of coverage (in percentage) in three separate columns. These values summarise the range and distribution of values among all exomes in 1KGP (N=2,504) as a whole. Mean values by population groups are provided in the <strong>Details</strong> section. Each row in the table is colored based on the global mean value: grean for global mean breadth of coverage greater than 99%, yellow for values between 99% and 95%, and red for any values less than 95%.</p></li>
+<li><p><strong>ANOVA F-statistic</strong>: reports the F-statistic for a one-way ANOVA test to compare the means between the five population groups in 1KGP. The null hypotesis in ANOVA test was that all samples were drawn from a distribution with the same mean values (<em>i.e.</em>, no difference across populations).</p></li>
+<li><p><strong>Raw P-Value</strong>: the unadjusted P-value from the ANOVA test.</p></li>
+<li><p><strong>Adj. P-Value</strong>: the P-value adjusted for false discovery rate (FDR) of 5%.</p></li>
+<li><p><strong>Action</strong> column has a <em>Detail</em> button that opens a pop-up window to show population summary, coverage plots, comparison between populations, and gene panel tests for the gene.</p></li>
+</ul>
+<p>Given that the global mean breadth of coverage for <em>PNPLA3</em> is less than 95% (also indicated by the red background color in the table), it is advised to check additional information by clicking <em>Detail</em> button.</p>
+</div>
+<div class="section" id="details-window">
+<h2><span class="section-number">3.3. </span>Details window<a class="headerlink" href="#details-window" title="Permalink to this headline">¶</a></h2>
+<p>The new pop-up window consists of multiple tabs with different information for the selected gene.</p>
+<p><strong>Per-population summary</strong> reports the mean breadth of coverage for each CCDS ID by each of the five population groups in 1KGP: African (AFR), American (AMR), East Asian (EAS), European (EUR), and South Asian (SAS). This information may be used to highlight differences in coverage between different populations. For example, exons that are comprehensively covered by WES in Europeans may have a lower mean breadth of coverage in another ancestry, suggesting the use of gene panels instead (especially for non-European).</p>
+<a class="reference internal image-reference" href="_images/detail_1.png"><img alt="_images/detail_1.png" class="align-center" src="_images/detail_1.png" style="width: 709.1999999999999px; height: 180.6px;" /></a>
+<p><strong>Coverage plots</strong> displays two plots: the breadth of coverage distribution by each population groups in 1KGP (left) and per-locus coverage metric across genomic loci for the gene (right).</p>
+<a class="reference internal image-reference" href="_images/detail_2.png"><img alt="_images/detail_2.png" class="align-center" src="_images/detail_2.png" style="width: 709.1999999999999px; height: 328.2px;" /></a>
+<p>The violin plot on the left shows the breadth of coverage distribution by each population groups in 1KGP. The black horizontal line marks the average per-locus coverage metric based on exomes in the <a class="reference external" href="https://gnomad.broadinstitute.org/">Genome Aggregation Database</a> (gnomAD), as an independant estimate from large-scale data (125,748 exomes in the release 2.1).</p>
+<p>The second plot on the right  shows coverage metric (from exomes in gnomAD browser) over genomic positions in the selected gene for the GRCh37 (b37/hg19) reference genome. The plot consists of two parts: the coverage metric over genomic positions (top) and exons and transcripts in the gene (bottom). The coverage metric is defined as the proportion of exomes in the gnomAD (y-axis) which achieved the target depth of coverage (5x, 10x, 15x, 20x, 25x, 30x, 50x, or 100x) at the given locus (x-axis). The coverage metrics at different target depths are represented by different colors: 5x (red), 10x (dark orange), 15x (orange), 20x (yellow), 25x (light green), 30x (green), 50x (greenish blue), and 100x (blue).</p>
+<p>If the given position in the gene is well-covered in most of gnomAD exomes, the position will have high metric values (and in darker colors, too, if the position is also well-covered at higher target depths). For the <em>PNPLA3</em> gene, most coding exons (except for the leftmost one) are well-covered at all depths. On the other hand, if a region is shown only in red-to-yellow colors (<em>e.g.</em>, high percentage of exomes attained 10x coverage for the region, but very low percentage of exomes with 30x or more), or the region have low metric values over any target depths (<em>e.g.</em>, only 5% of exomes had covered the region at any level), it indicates that the part of the gene is not well covered among exomes in gnomAD. In the above figure, the leftmost exon in <em>PNPLA3</em> gene is less-covered compared to other exons.</p>
+<p>The genes’ exon-intron structures are shown below the coverage metric plot, as a guide to identify coverage levels within the gene. The light blue blocks at either end represent the untranslated region (UTR) of the gene, while the dark blue blocks represent the exons. Introns are shown as blue lines connecting blocks. Note that the introns of the genes are scaled down to the same length to emphasize the exons. The gene model may show multiple transcripts for the gene, even if a single CCDS transcript is selected. Since coverage metric from gnomAD is based only on GRCh37 (hg19/b37), some genes picked from GRCh38 may not have a corresponding plot for gnomAD coverage metric.</p>
+<p><strong>Comparison of distribution</strong> allows users to visualize and to compare cumulative distribution (with Kolmogorov–Smirnov test) for breadth of coverage between pair of populations. Once the pair of population is specified on the left panel, the right part will be updated with the corresponding cummulative distributions. Two black dots connected with dashed line shows the point where the gap between two distribution is the largest. The D-statistics and p-value from Kolmogorov-Smirnov test are shown above the plot.</p>
+<a class="reference internal image-reference" href="_images/detail_3.png"><img alt="_images/detail_3.png" class="align-center" src="_images/detail_3.png" style="width: 709.1999999999999px; height: 328.2px;" /></a>
+<p><strong>Comparison of means</strong> shows the pairwise differences between means of breadth of coverage using the Tukey’s Honest Significant Difference test. The left triangular plot shows the estimated pairwise differences of means. The right plot shows the p-values from the significant difference test.</p>
+<p><strong>Tests in GTR for the gene</strong> provides a list of all gene panel tests registered in GTR that involves the selected gene. Each panel is listed by its unique accession version and provides a hyperlink to its entry in GTR when clicked. Given all genes reported by WEScover to be poorly covered by WES, users may browse these panels and read their entries in GTR to learn how to gain access to these tests.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="4. Local installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gtr.html" class="btn btn-neutral float-left" title="2. Using the Genetic Testing Registry to find genes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, In-Hee Lee
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
