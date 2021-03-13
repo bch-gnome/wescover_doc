@@ -1,4 +1,5 @@
 project = 'WEScover'
+copyright = '2021, In-Hee Lee'
 author = 'In-Hee Lee'
 
 version = ''
